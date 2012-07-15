@@ -19,8 +19,10 @@ on init
     mkdir /cache
     mount /tmp /tmp tmpfs
 
-on boot
+    insmod /lib/modules/exfat_core.ko
+    insmod /lib/modules/exfat_fs.ko
 
+on boot
     ifup lo
     hostname localhost
     domainname localdomain
