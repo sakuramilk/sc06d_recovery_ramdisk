@@ -23,6 +23,7 @@ on init
     insmod /lib/modules/exfat_fs.ko
 
 on boot
+
     ifup lo
     hostname localhost
     domainname localdomain
